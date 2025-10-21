@@ -15,5 +15,15 @@
         <pattern>%d{ISO8601} %-5p [%thread] %c:%L - %m%n</pattern>
       </appender>
     </logging>
+    <protector>
+      <keyStore>
+        <type>JCEKS</type>
+        <path>keystore/midpoint.jceks</path>
+        <password>changeit</password>
+        <keyPassword>changeit</keyPassword>
+        <defaultKeyAlias>midpoint</defaultKeyAlias>
+        <encryptionKeyAlias>midpoint</encryptionKeyAlias>
+      </keyStore>
+    </protector>
   </midpoint>
 </configuration>
