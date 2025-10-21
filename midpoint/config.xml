@@ -17,9 +17,9 @@
     </logging>
     <protector>
       <keyStore>
-        <keyStoreType>JCEKS</keyStoreType>
-        <keyStorePath>${midpoint.home}/keystore/midpoint.jceks</keyStorePath>
-        <keyStorePassword>changeit</keyStorePassword>
+        <type>JCEKS</type>
+        <path>${midpoint.home}/keystore/midpoint.jceks</path>
+        <password>changeit</password>
         <privateKeyPassword>changeit</privateKeyPassword>
         <defaultKeyAlias>midpoint</defaultKeyAlias>
         <encryptionKeyAlias>midpoint</encryptionKeyAlias>
