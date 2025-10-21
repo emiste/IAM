@@ -1,0 +1,90 @@
+{
+  "realm": "midpoint-demo",
+  "enabled": true,
+  "displayName": "MidPoint Demo Realm",
+  "registrationAllowed": false,
+  "loginWithEmailAllowed": true,
+  "duplicateEmailsAllowed": false,
+  "resetPasswordAllowed": true,
+  "rememberMe": true,
+  "clients": [
+    {
+      "clientId": "test-app",
+      "rootUrl": "http://localhost:8082",
+      "redirectUris": [
+        "http://localhost:8082/*"
+      ],
+      "webOrigins": [
+        "*"
+      ],
+      "publicClient": true,
+      "protocol": "openid-connect",
+      "standardFlowEnabled": true,
+      "implicitFlowEnabled": false,
+      "directAccessGrantsEnabled": true,
+      "serviceAccountsEnabled": false,
+      "attributes": {
+        "post.logout.redirect.uris": "http://localhost:8082/*"
+      }
+    },
+    {
+      "clientId": "midpoint",
+      "name": "MidPoint OIDC",
+      "protocol": "openid-connect",
+      "publicClient": false,
+      "secret": "midpoint-secret",
+      "serviceAccountsEnabled": true,
+      "standardFlowEnabled": true,
+      "redirectUris": [
+        "http://localhost:8080/midpoint/oidc/callback"
+      ],
+      "webOrigins": [
+        "http://localhost:8080"
+      ],
+      "defaultClientScopes": [
+        "profile",
+        "roles",
+        "email"
+      ]
+    }
+  ],
+  "users": [
+    {
+      "username": "alice",
+      "enabled": true,
+      "email": "alice@example.com",
+      "firstName": "Alice",
+      "lastName": "Durand",
+      "credentials": [
+        {
+          "type": "password",
+          "value": "ChangeMe1!",
+          "temporary": false
+        }
+      ],
+      "realmRoles": [
+        "default-roles-midpoint-demo"
+      ]
+    },
+    {
+      "username": "midpoint-service",
+      "enabled": true,
+      "serviceAccountClientId": "midpoint"
+    }
+  ],
+  "roles": {
+    "realm": [
+      {
+        "name": "midpoint-admin",
+        "composite": true,
+        "clientRole": false,
+        "containerId": "midpoint-demo",
+        "composites": {
+          "realm": [
+            "default-roles-midpoint-demo"
+          ]
+        }
+      }
+    ]
+  }
+}

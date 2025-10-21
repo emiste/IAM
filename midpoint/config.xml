@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+  <midpoint>
+    <repository>
+      <repositoryServiceFactoryClass>com.evolveum.midpoint.repo.sql.SqlRepositoryFactory</repositoryServiceFactoryClass>
+      <database>postgresql</database>
+      <jdbcUsername>midpoint</jdbcUsername>
+      <jdbcPassword>midpoint</jdbcPassword>
+      <jdbcUrlTemplate>jdbc:postgresql://midpoint-db:5432/midpoint</jdbcUrlTemplate>
+      <hibernateHbm2ddl>update</hibernateHbm2ddl>
+    </repository>
+    <logging>
+      <appender>
+        <name>STDOUT</name>
+        <pattern>%d{ISO8601} %-5p [%thread] %c:%L - %m%n</pattern>
+      </appender>
+    </logging>
+  </midpoint>
+</configuration>
