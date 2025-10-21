@@ -1,0 +1,46 @@
+# OS-specific junk
+.DS_Store
+Thumbs.db
+
+# IDE and editor folders
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Dependency directories
+node_modules/
+vendor/
+
+# Python artifacts
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Build outputs
+build/
+dist/
+coverage/
+*.coverage
+*.log
+logs/
+
+# Environment files
+.env
+.env.*
+*.env
+
+# Docker and compose generated data
+midpoint/midpoint-home/
+
+# Allow binary assets that should be versioned
+!*.ico
+!*.png
+!*.jpg
+!*.jpeg
+!*.gif
+!*.pdf
+!*.zip
+!*.jar
+!*.bin
+!*.jceks
