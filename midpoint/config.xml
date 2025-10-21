@@ -18,7 +18,7 @@
     <protector>
       <keyStore>
         <type>JCEKS</type>
-        <path>${midpoint.home}/keystore/midpoint.jceks</path>
+        <path>${midpoint.home}/../keystore/midpoint.jceks</path>
         <password>changeit</password>
         <privateKeyPassword>changeit</privateKeyPassword>
         <defaultKeyAlias>midpoint</defaultKeyAlias>
