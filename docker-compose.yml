@@ -29,6 +29,10 @@ services:
       MP_MEM_MAX: 2048m
       MP_MEM_MIN: 1024m
       MP_JAVA_OPTS: "-Dmidpoint.repository.initializer.allowEmpty=true"
+      MP_SET_midpoint_repository_database: postgresql
+      MP_SET_midpoint_repository_jdbcUrl: jdbc:postgresql://midpoint-db:5432/midpoint
+      MP_SET_midpoint_repository_jdbcUsername: midpoint
+      MP_SET_midpoint_repository_jdbcPassword: midpoint
     volumes:
       - ./midpoint:/opt/midpoint/var
     ports:
